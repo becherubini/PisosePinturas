@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8" />
+	
+	<title>Pisos e Pinturas | Colocação de pisos e pinturas em geral em Porto Alegre</title>
+	
+	<meta name="msvalidate.01" content="D24B08982D9E7A1664CD5150059F125A" />
+	
+	<meta name="description" content="Pisos e Pinturas | Colocação de pisos e pinturas em geral - Grande Porto Alegre - Pintor - pisospinturas - pisosepinturas - pisospintura - pisosepintura" />
+	
+	<meta name="keywords" content="porto alegre, pisos, pinturas, colocação de pisos, pinturas em geral, pintura de parede, grande porto alegre, casa e construção, pintor, pisospinturas, pisosepinturas, pisospintura, pisosepintura, pisos e pinturas, calfinagem, textura, porcelanato, cerâmica, churrasqueiras" />
+	
+	<link rel="stylesheet" type="text/css" href="css/estilo.css" /> 
+	
+	
+		
+		<!-- Attach our CSS -->
+	  	<link rel="stylesheet" type="text/css" href="css/orbit-slider.css" /> 
+		<link rel="stylesheet" type="text/css" href="css/orbit-style.css" /> 
+	  	
+		<!-- Attach necessary JS -->
+		<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.orbit-1.2.3.min.js"></script>	
+		
+			<!--[if IE]>
+			     <style type="text/css">
+			         .timer { display: none !important; }
+			         div.caption { background:transparent; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);zoom: 1; }
+			    </style>
+			<![endif]-->
+		
+		<!-- Run the plugin -->
+		<script type="text/javascript">
+			var a1 = false;
+			
+			$(window).load(function() {
+				$('#featured').orbit();
+				
+				$(".box").mouseover(function() {
+					$(this).addClass("fundo");
+				});
+				
+				$(".box").mouseout(function() {
+					$(this).removeClass("fundo");
+				});
+				
+				
+				$(".formText").one('keypress',function(){
+					$(this).val("");
+					$(this).addClass("formClick");	 
+				});
+				
+				$('#erro').hide();
+				
+				$("#botao").click(function() {
+						// validate and process form
+						// first hide any error messages
+					$('#erro').hide();
+						
+					  var nome = $("input#nome").val();
+						if (nome == "" || nome == "Nome: ") {
+					  $("#erro").show('fast');
+					  
+					  $("input#nome").focus();
+					  return false;
+					}
+						var email = $("input#email").val();
+						if (email == "" || email == "Email: ") {
+					  $("#erro").show();
+					  $("input#email").focus();
+					  return false;
+					}
+						var txt = $("#txt").val();
+					if (txt == "" || txt == "Mensagem: ") {
+					  $("#erro").show();
+					  $("#txt").focus();
+					  return false;
+					}
+						
+						var dataString = 'nome='+ nome + '&email=' + email + '&txt=' + txt;
+						//alert (dataString);return false;
+						
+						$.ajax({
+						  type: "POST",
+						  url: "enviar.php",
+						  data: dataString,
+						  success: function() {
+							$('#formularioContato').html("<div id='message' class='alert alert-success'></div>");
+							$('#message').html("<h2>Mensagem enviada!</h2>")
+							.append("<p>Entraremos em contato em preve.</p>")
+							.hide()
+							.fadeIn(1500, function() {
+							  $('#message').append("<img id='checkmark' src='img/check.png' alt='checkmark'/>");
+							});
+						  }
+						 });
+					return false;
+				});
+			});
+		</script>
+		
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32488691-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<div class="header"></div>
+<div class="topo">
+	<div class="topoLogo">
+		<div class="logoContainer">
+			<a class="logo" href="http://pisosepinturas.com.br" alt="pisosepintuas.com.br">pisosepinturas.com.br</a>
+		</div>
+		<div class="sloganContainer">
+			<h1 class="slogan">Colocação de pisos e pinturas em geral</h1>
+		</div>
+	</div>
+	<div class="topoInfo">
+		<div class="foneContainer">
+			<div class="fone">
+				<span>(51) xxxx-xxxx</span>
+			</div>
+		</div>
+		<div class="mailContainer">
+			<div class="mail">
+				<span><a href="mailto:contato@pisosepinturas.com.br" alt="e-mail de contato">contato@pisosepinturas.com.br</a></span>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="cabecalhoTrabalhos"><span>Trabalhos</span></div>
+<div class="meio">
+	<div class="fotos">
+		
+		<div class="orbitBorder">
+			<center>
+			<div id="featured"> 
+					
+					<img src="img/fotos/foto1.jpg" data-caption="#htmlCaption1" alt="Paredes de escadas: colocação de pisos em paredes com diferentes níveis"/>
+					<img src="img/fotos/foto2.jpg" data-caption="#htmlCaption2" alt="Sala de estar" />
+					<img src="img/fotos/foto3.jpg" data-caption="#htmlCaption3" alt="Cozinha" />
+					
+			</div>
+				<!-- Captions for Orbit -->
+				<span class="orbit-caption" id="htmlCaption1"> <strong>Paredes de escadas</strong>: colocação de pisos em paredes com diferentes níveis </span>
+				<span class="orbit-caption" id="htmlCaption2"><strong>Sala de estar</strong> </span>
+				
+				<span class="orbit-caption" id="htmlCaption3"><strong>Cozinha</strong></span>
+			</center>
+		</div>
+		
+	</div>
+	
+	<div class="caixas">
+		
+		<div class="box">
+			<h2>Serviços</h2>
+			<div class="conteudo">
+			<p>Colocação de pisos:</p>
+				<ul>
+					<li>Porcelanato</li>
+					<li>Cerâmica</li>
+				</ul>
+			
+			<p> Pintura em geral <br>
+				Textura <br>
+				Calfinagem <br>
+				Entre outros à combinar em visita</p>
+			</div>
+			
+		</div>
+		<div class="boxForm">
+			<h2>Agende um orçamento</h2>
+			<div class="conteudo">
+			<p>Atendemos somente em Porto Alegre. <Br>
+			<strong>(51) 8413-2888 </strong>|<strong> <a href="mailto:contato@pisosepinturas.com.br" alt="e-mail de contato">contato@pisosepinturas.com.br</a></strong> <Br>Se preferir, use o formulário abaixo:</p>
+			<Br>
+			<div id="formularioContato">
+				<form name="contato" action="" method="post" action="">
+				<input type="text" id="nome" value="Nome: " class="formText"><input type="text" id="email" value="Email: " class="formText"><br>
+				<textarea class="formText" id="txt">Mensagem: </textarea> <button class="btn btn-primary btn-large" id="botao">Enviar</button>
+			</div>	
+			
+			</form>
+			
+			 <div class="alert alert-error" id="erro"> <button class="close" data-dismiss="alert">×</button> <strong>Atenção!</strong> Todos os campos são obrigatórios.</div>
+			
+			</div>
+		</div>
+		
+	</div>
+	
+	
+</div>
+<div class="rodape"> </div> 
+
+	
+</body>
+</html>
